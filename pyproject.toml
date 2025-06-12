@@ -2,10 +2,16 @@
 name = "musedetect"
 version = "0.1.0"
 description = "A package to facilitate instrument detection"
-authors = ["Dylan Sechet", "Agathe Gioan", "Xavier Jeunot", "Aaron Broderick", "Edouard d'Hérouville"]
+authors = [
+    "Dylan Sechet",
+    "Agathe Gioan",
+    "Xavier Jeunot",
+    "Aaron Broderick",
+    "Edouard d'Hérouville",
+]
 license = ""
 readme = "README.md"
-packages = [{include = "musedetect"}]
+packages = [{ include = "musedetect" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -33,25 +39,17 @@ pylint = "^2.17.1"
 ruff = "^0.0.260"
 
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-
-[tool.black]
-line-length = 120
-
-[tool.isort]
-profile = "black"
-line_length = 120
-
 [tool.ruff]
-ignore-init-module-imports = true
 line-length = 120
+ignore-init-module-imports = true
+extend-select = ["I"]
 
 [tool.pylint.GENERAL]
-disable="""
+disable = """
     too-few-public-methods,
     duplicate-code,
     logging-fstring-interpolation,
@@ -70,12 +68,12 @@ disable="""
     """
 
 [tool.pylint.FORMAT]
-max-line-length=120
+max-line-length = 120
 
 [tool.pylint.BASIC]
-good-names="i,j,df,x,y,X"
+good-names = "i,j,df,x,y,X"
 
 [tool.pylint.TYPECHECK]
 # List of members which are set dynamically and missed by Pylint inference
 # system, and so shouldn't trigger E1101 when accessed.
-generated-members="numpy.*, torch.*"
+generated-members = "numpy.*, torch.*"
