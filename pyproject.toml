@@ -17,7 +17,7 @@ packages = [{ include = "musedetect" }]
 python = "^3.10"
 tqdm = "^4.64.1"
 numpy = "^1.23.5"
-seaborn = "^0.12.1"
+seaborn = "^0.13"
 matplotlib = "^3.6.2"
 pandas = "^1.5.2"
 joblib = "^1.2.0"
@@ -45,7 +45,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 120
-ignore-init-module-imports = true
+
+[tool.lint.ruff]
 extend-select = ["I"]
 
 [tool.pylint.GENERAL]
